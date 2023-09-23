@@ -1,0 +1,152 @@
+HP@DESKTOP-SH4531T MINGW64 ~ (master)
+$ git clone git@github.com:binhquocnguyen/git_test.git
+Cloning into 'git_test'...
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Receiving objects: 100% (3/3), done.
+
+HP@DESKTOP-SH4531T MINGW64 ~ (master)
+$ cd git_test
+
+HP@DESKTOP-SH4531T MINGW64 ~/git_test (main)
+$ git remote -v
+origin  git@github.com:binhquocnguyen/git_test.git (fetch)
+origin  git@github.com:binhquocnguyen/git_test.git (push)
+
+HP@DESKTOP-SH4531T MINGW64 ~/git_test (main)
+$ touch hello_world.txt
+
+HP@DESKTOP-SH4531T MINGW64 ~/git_test (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        hello_world.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+HP@DESKTOP-SH4531T MINGW64 ~/git_test (main)
+$ git add hello_world.txt
+
+HP@DESKTOP-SH4531T MINGW64 ~/git_test (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   hello_world.txt
+
+
+HP@DESKTOP-SH4531T MINGW64 ~/git_test (main)
+$ git commit -m "Add hello_world.txt"
+[main 4519fa9] Add hello_world.txt
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 hello_world.txt
+
+HP@DESKTOP-SH4531T MINGW64 ~/git_test (main)
+$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+HP@DESKTOP-SH4531T MINGW64 ~/git_test (main)
+$ git log
+commit 4519fa9d1f37200659955c39462fd0ea36ec6036 (HEAD -> main)
+Author: binhquocnguyen <binhquoc7504@gmail.com>
+Date:   Sat Sep 23 19:00:08 2023 +0700
+
+    Add hello_world.txt
+
+commit 24fab253ccdd46d14913cf757e2fa8a498a4f2a6 (origin/main, origin/HEAD)
+Author: binhquocnguyen <129365503+binhquocnguyen@users.noreply.github.com>
+Date:   Sat Sep 23 09:26:07 2023 +0700
+
+    Initial commit
+
+HP@DESKTOP-SH4531T MINGW64 ~/git_test (main)
+$ code .
+
+HP@DESKTOP-SH4531T MINGW64 ~/git_test (main)
+$ git add README.md
+
+HP@DESKTOP-SH4531T MINGW64 ~/git_test (main)
+$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   README.md
+
+
+HP@DESKTOP-SH4531T MINGW64 ~/git_test (main)
+$ git add hello_world.txt
+
+HP@DESKTOP-SH4531T MINGW64 ~/git_test (main)
+$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   README.md
+        modified:   hello_world.txt
+
+
+HP@DESKTOP-SH4531T MINGW64 ~/git_test (main)
+$ git add .
+
+HP@DESKTOP-SH4531T MINGW64 ~/git_test (main)
+$ git commit -m "Edit README.md and hello_world.txt"
+[main 00eaa6c] Edit README.md and hello_world.txt
+ 2 files changed, 3 insertions(+), 1 deletion(-)
+
+HP@DESKTOP-SH4531T MINGW64 ~/git_test (main)
+$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 2 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+HP@DESKTOP-SH4531T MINGW64 ~/git_test (main)
+$ git log
+commit 00eaa6c8dbdb74fe5a21a57ee226a803f64e21ee (HEAD -> main)
+Author: binhquocnguyen <binhquoc7504@gmail.com>
+Date:   Sat Sep 23 21:59:17 2023 +0700
+
+    Edit README.md and hello_world.txt
+
+commit 4519fa9d1f37200659955c39462fd0ea36ec6036
+Author: binhquocnguyen <binhquoc7504@gmail.com>
+Date:   Sat Sep 23 19:00:08 2023 +0700
+
+    Add hello_world.txt
+
+commit 24fab253ccdd46d14913cf757e2fa8a498a4f2a6 (origin/main, origin/HEAD)
+Author: binhquocnguyen <129365503+binhquocnguyen@users.noreply.github.com>
+Date:   Sat Sep 23 09:26:07 2023 +0700
+
+    Initial commit
+
+HP@DESKTOP-SH4531T MINGW64 ~/git_test (main)
+$ git push origin main
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (7/7), 631 bytes | 126.00 KiB/s, done.
+Total 7 (delta 0), reused 0 (delta 0), pack-reused 0
+To github.com:binhquocnguyen/git_test.git
+   24fab25..00eaa6c  main -> main
+
+HP@DESKTOP-SH4531T MINGW64 ~/git_test (main)
+$
